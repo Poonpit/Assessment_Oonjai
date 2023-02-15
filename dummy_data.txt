@@ -1,0 +1,19 @@
+BEGIN;
+
+INSERT INTO users(id, name, email, password, role, personal_information, unreadNotification) VALUES
+("8e4594a4-18c4-4022-a2fd-8185be87875a", "ผู้ป่วยโรคเอดส์", "patient1@mail.com", "1234", "PATIENT", NULL, 0),
+("9f7c182e-2a8c-4695-aa7a-c23a0a89e045", "หมอดิว", "doctor1@mail.com", "1234", "DOCTOR", "สวัสดีครับ ผมเก่งเรื่องยาครับ", 0),
+("a16abad2-e3c3-438d-aadc-f6c142bad167", "Administrator", "admin1@mail.com", "1234", "ADMINISTRATOR", NULL, 0);
+
+INSERT INTO profile_images(doctor_id, image_id, url) VALUES
+("8e4594a4-18c4-4022-a2fd-8185be87875a", "1", "https://www.hollywoodreporter.com/wp-content/uploads/2022/01/Jason-Momoa-Dune-Red-Carpet-GettyImages-1347319098-H-2022.jpg"),
+("9f7c182e-2a8c-4695-aa7a-c23a0a89e045", "2", "https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg"),
+("a16abad2-e3c3-438d-aadc-f6c142bad167", "3", "https://www.betterteam.com/images/operations-administrator-job-description-5616x3744-2020124.jpeg");
+
+INSERT INTO topics(id, topic) VALUES
+("02fc11f6-791c-41b4-b05a-99ba53b8dfe4", "สุขภาพจิต"),
+("1769ac9a-9cf0-4fe3-afb0-1c413d2b1eed", "การนอนหลับ"),
+("67a4a537-7ebc-43eb-8d3a-c798c9051e5c", "การกิน"),
+("741e1734-e896-4bab-ad9d-a4828d5b30d9", "กระดูก");
+
+COMMIT;
