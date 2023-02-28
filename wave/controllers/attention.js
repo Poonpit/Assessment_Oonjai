@@ -3,7 +3,7 @@ const { v4 } = require("uuid");
 
 class AttentionController {
     async getAttentionList(req, res) {
-        const { userId } = req.user;
+        const { userId, role } = req.user;
 
         const query = `
             SELECT interested_in.id AS attention_id, topics.id AS topic_id, topics.topic AS topic
@@ -14,8 +14,19 @@ class AttentionController {
 
         try {
             const attentionTopics = await db.connection.query(query, [userId]);
+
+            let user = {
+                turnOnNotification: false
+            }
+            if(role === "PATIENT") {
+                const profileQuery = `SELECT turn_on_notification FROM users WHERE id=?`;
+                const [userSettings] = await db.connection.query(profileQuery, [userId]);
+                user.turnOnNotification = userSettings.turn_on_notification;
+            }
+
             res.send({
                 attentionList: attentionTopics,
+                turnOnNotification: user.turnOnNotification,
             });
         } catch (e) {
             res.status(500).send({

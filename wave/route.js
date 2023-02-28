@@ -68,6 +68,16 @@ class MainRoute {
             this.authorizationMiddleware.verifyUser,
             this.notificationController.getNotifications
         );
+        this.router.put(
+            "/notifications/turnOn",
+            this.authorizationMiddleware.verifyGeneralUser,
+            this.notificationController.turnOnNotification
+        );
+        this.router.put(
+            "/notifications/turnOff",
+            this.authorizationMiddleware.verifyGeneralUser,
+            this.notificationController.turnOffNotification
+        );
 
         // profile
         this.router.get("/profile", this.authorizationMiddleware.verifyUser, this.profileController.getProfile);

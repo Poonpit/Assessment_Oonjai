@@ -5,7 +5,8 @@ CREATE TABLE IF NOT EXISTS users (
     password VARCHAR(255) NOT NULL,
     role ENUM("ADMINISTRATOR", "DOCTOR", "PATIENT") NOT NULL,
     personal_information VARCHAR(255),
-    unreadNotification INT DEFAULT 0,
+    unread_notification INT DEFAULT 0, -- Changed unreadNotification to unread_notification
+    turn_on_notification BOOLEAN DEFAULT 0, -- New column
     
     INDEX(email)
 );
