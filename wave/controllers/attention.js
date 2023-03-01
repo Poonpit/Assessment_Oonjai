@@ -9,16 +9,16 @@ class AttentionController {
             SELECT interested_in.id AS attention_id, topics.id AS topic_id, topics.topic AS topic
             FROM interested_in
             LEFT JOIN topics
-            ON interested_in.topic_id=topics.id AND interested_in.user_id=?
+            ON interested_in.topic_id=topics.id
+            WHERE interested_in.user_id=?
         `;
 
         try {
             const attentionTopics = await db.connection.query(query, [userId]);
-
             let user = {
-                turnOnNotification: false
-            }
-            if(role === "PATIENT") {
+                turnOnNotification: false,
+            };
+            if (role === "PATIENT") {
                 const profileQuery = `SELECT turn_on_notification FROM users WHERE id=?`;
                 const [userSettings] = await db.connection.query(profileQuery, [userId]);
                 user.turnOnNotification = userSettings.turn_on_notification;
@@ -49,18 +49,20 @@ class AttentionController {
                 }
                 const query = `SELECT * FROM topics WHERE id NOT IN (${topicIdsString})`;
                 const topics = await db.connection.query(query);
+                
                 res.send({
                     topics,
                 });
             } else {
                 const query = `SELECT * FROM topics`;
                 const topics = await db.connection.query(query);
+                console.log(topics);
+                
                 res.send({
                     topics,
                 });
             }
         } catch (e) {
-            console.log(e);
             res.status(500).send({
                 message: "Something went wrong",
             });
@@ -88,9 +90,11 @@ class AttentionController {
                 SELECT interested_in.id AS attention_id, topics.id AS topic_id, topics.topic AS topic
                 FROM interested_in
                 LEFT JOIN topics
-                ON interested_in.topic_id=topics.id AND interested_in.id=?
+                ON interested_in.topic_id=topics.id
+                WHERE interested_in.id=?
             `;
             const [addedItem] = await db.connection.query(query, [attentionId]);
+            
             res.send({
                 attentionItem: addedItem,
             });
