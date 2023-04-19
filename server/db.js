@@ -10,7 +10,7 @@ class DB {
             this.connection = await createConnection({
                 host: "localhost",
                 user: "root",
-                password: "1234",
+                password: "",
                 database: "oonjai",
                 multipleStatements: true,
             });

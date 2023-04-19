@@ -1,0 +1,221 @@
+.front{
+    color:rgb(189, 120, 120);
+    text-align: center;
+    font-size:"1.5rem";
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+
+.item{
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 26px;
+    text-align: justify;
+    text-align-last: center;
+    list-style-type: none;
+    background: #eed8d8;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.70);
+    padding: 25px 115px 30px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+    
+
+}
+.list{
+    display: block;
+    margin: auto;
+    flex-direction: column;
+}
+.app{
+    font-family: 'Noto Sans Thai', sans-serif;
+    /* background-color: #ebe1e1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 3); */
+    text-align-last: center;
+    /* text-align: justify;
+    text-align-last: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.label{
+    font-size: 20px;
+
+}
+.bottom{
+    background-color: #997777;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.70);
+}
+.qus{
+    position: relative;
+    /* bottom: 0;
+    right: 3;
+    width: 340px; */
+    
+}
+.block{
+    width: 750px;
+}
+.point{
+    width: 60px
+}
+.des{
+    width: 810px;
+    height: 70px;
+
+}
+.number{
+    width: 40px;
+    text-align: center;
+}
+.create{
+    font-family: 'Noto Sans Thai', sans-serif;
+    text-align-last: center;
+    font-size: 50px;;
+    width: 500px;
+    height: 150px;
+    color: #997777;
+    background-color: #eed8d8;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+.top{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans Thai', sans-serif;
+    justify-content: space-around;
+
+}
+.listform{
+    font-family: 'Noto Sans Thai', sans-serif;
+    display: flex;
+    /* justify-content: center; */
+    text-align: center;
+    flex-direction: column;
+    font-size: 23px;
+}
+.tap{
+    width: 150px;
+    height: 50px;
+    align-self: center;
+    background-color: #997777;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.70);
+
+}
+.top{
+    text-align: center;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 25px;
+
+}
+.down{
+    text-align: center;
+    font-family: 'Noto Sans Thai', sans-serif;
+    display: block;
+    margin: auto;
+    background-color: #997777;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    font-size: 23px;
+}
+.radio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.min{
+    font-family: 'Noto Sans Thai', sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;  
+}
+.min_text{
+    font-size: 35px;
+    color: green;
+}
+.min_des{
+    word-wrap: break-word;
+    font-size: 20px;
+}
+.mid{
+    font-family: 'Noto Sans Thai', sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;  
+}
+.mid_text{
+    font-size: 35px;
+    color: rgb(222, 116, 234);
+}
+.mid_des{
+    word-wrap: break-word;
+    font-size: 20px;
+}
+.max{
+    font-family: 'Noto Sans Thai', sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;  
+}
+.max_text{
+    font-size: 35px;
+    color: rgb(255, 0, 0);
+}
+.max_des{
+    word-wrap: break-word;
+    font-size: 20px;
+}
+.box{
+    font-family: 'Noto Sans Thai', sans-serif;
+    width: 600px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.70);
+    margin: 0;
+    font-family: 'Noto Sans Thai', sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #efdddd;
+}
+.text{
+    font-size: 25px;
+}
+.result{
+    font-size: 20px;
+}

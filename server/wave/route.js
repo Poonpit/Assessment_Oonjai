@@ -7,7 +7,7 @@ const TopicController = require("./controllers/topic");
 
 const AuthValidator = require("./validators/auth");
 
-const AuthorizationMiddleware = require("./middlewares/authorization");
+const AuthorizationMiddleware = require("./middlewares/authorization.js");
 
 class MainRoute {
     router;
